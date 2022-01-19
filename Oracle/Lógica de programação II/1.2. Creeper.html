@@ -1,0 +1,31 @@
+<canvas width="600" height="400"></canvas>
+<script>
+    var canvas = document.querySelector("canvas");
+    var pincel = canvas.getContext("2d");
+<!--FUNDO-->
+    pincel.fillStyle = "skyblue"
+    pincel.fillRect(0,0,600,400)
+<!--CABEÇA-->
+    var faceColor = "blue"
+    pincel.fillStyle = faceColor
+    pincel.fillRect(100,50,350,300)
+    var eyesColor = "green"
+<!--OLHO D-->
+    pincel.fillStyle = eyesColor
+               <!--  x   y   w   h -->
+    pincel.fillRect(150,100,90,90)
+<!--OLHO E-->
+    pincel.fillStyle = eyesColor
+    pincel.fillRect(310,100,90,90)
+<!--BOCA 1-->
+    pincel.fillStyle = "black"
+    pincel.fillRect(240,190,70,110)
+<!--BOCA 2-->
+    pincel.fillStyle = "black"
+    pincel.fillRect(200,240,40,110)
+<!--BOCA 3-->
+    pincel.fillStyle = "black"
+    pincel.fillRect(310,240,40,110)
+
+
+</script>

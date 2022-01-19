@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha(){
+        document.write("<br>")
+    }
+
+    
+    function print(txt) {
+        document.write(txt)
+        pulaLinha()
+    }
+
+    var numero = Math.round(Math.random() * 10);
+    contador = 0
+    chances = 3
+    while(contador < chances) {
+        if(contador == chances) {
+            alert("O número era " + numero + ".")
+        }
+        var chute = parseInt(prompt((contador+1) + "ª Chance:\nChute um número:"));
+        if(chute == numero) {
+            alert("Você acertou!");
+            break;
+        }else{
+            alert("Você errou!");
+            contador ++
+        }
+
+    }
+
+</script>

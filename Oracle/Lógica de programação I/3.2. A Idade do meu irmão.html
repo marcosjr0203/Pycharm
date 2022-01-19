@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<script>
+	function pulaLinha(){
+		document.write("<br>")
+	}
+	function print(txt){
+		document.write(txt)
+		pulaLinha
+	}
+	function titulo(tit){
+		document.write("<h1>" + tit + "</h1>")
+	}
+	function subtrai(n1, n2){
+		document.write(n1 - n2)
+	}
+
+	titulo("A idade do meu irmão.")
+	var mon = 52
+	var mar = 50
+	var mary = 43
+	var eu = 38
+	var mat = 36
+	print("A diferença de idade entre mim e meus irmãos é:<br>")
+	subtrai(eu, mat)
+	print(" anos entre mim e o Matheus;<br>")
+	subtrai(mary, eu) 
+	print(" anos entre a Mary e eu;<br>")
+	subtrai(mar, eu) 
+	print(" anos entre o Marquinho e eu;<br>")
+	subtrai(mon, eu) 
+	print(" anos entre a Mônica e eu.<br>")
+
+</script>

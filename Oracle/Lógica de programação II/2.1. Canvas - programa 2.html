@@ -1,0 +1,18 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    function desenhaGrade(color, stroke, x,y){
+        pincel.fillStyle = color;
+        pincel.strokeStyle = stroke;
+        for(l = 0; l <= 600; l += x){
+            for(c = 0; c <= 400; c += y){
+                pincel.fillRect(l, c, x, y);
+                pincel.strokeRect(l, c, x, y);
+            }
+        }
+    }
+    var tela = document.querySelector("canvas");
+    var pincel =  tela.getContext("2d");
+    desenhaGrade("purple", "pink", 50, 50)
+
+</script>

@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<input/>
+<button>Verificar</button>
+
+<script>
+    function print(txt) {
+        document.write(txt + "<br>")
+        }
+
+    var segredos = [];
+    num_segredos = parseInt(prompt("Quantos segredos?"));
+    for(num_segredos; num_segredos > 0; num_segredos--) {
+        segredos += Math.round(Math.random()*10)
+        }
+    print(segredos)
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verifica() {
+        var achou = false;
+        for(var posit = 0; posit < segredos.length; posit++) {
+            if(input.value == segredos[posit]) {
+                alert("Você acertou!");
+                achou = true;
+                break;
+                }
+            }
+            if(achou == false) {
+                alert("Você errou!")
+            }
+        input.value = "";
+        input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+
+</script>

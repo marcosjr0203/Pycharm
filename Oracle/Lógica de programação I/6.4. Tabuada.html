@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+}
+
+    function print(txt) {
+        document.write(txt);
+        pulaLinha();
+}
+
+    var num = prompt("Escolha o número: ")
+<!--    UTILIZANDO WHILE    -->
+<!--    var inicio = 1--> parte 1
+<!--    var limite = 10-->
+<!--    while(inicio < limite) {--> parte 2
+<!--        print(num + " x " + inicio + " = " + num*inicio)-->
+<!--        inicio += 1 }--> parte 3
+<!--    UTILIZANDO FOR -->
+<!--    for(parte1; parte2; parte3) -->
+    for(inicio = 1; inicio <= 10; inicio ++) {
+        print(num + " x " + inicio + " = " + num*inicio)
+        }
+</script>

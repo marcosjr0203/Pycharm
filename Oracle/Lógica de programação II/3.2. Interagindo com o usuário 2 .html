@@ -1,0 +1,65 @@
+<canvas width = "600" height = 400></canvas>
+<br>
+Escolha uma cor <input type="color">
+
+<script>
+
+    var tela = document.querySelector("canvas");
+    var color = document.querySelector("input");
+    var pincel = tela.getContext("2d");
+    var c = 0
+    var r = 10
+    pincel.fillStyle = "skyblue";
+    pincel.fillRect(0,0,600,400);
+    desenha = false
+
+<!--  1 DESENHA COM O BOTÃO DIREITO PRESSIONADO: chamado por tela.onmousemove-->
+    function exibeCirculo(evento) {
+        if(desenha) {
+            var x = evento.pageX - tela.offsetLeft;
+            var y = evento.pageY - tela.offsetTop;
+            pincel.fillStyle = color.value;
+            pincel.beginPath();
+            pincel.arc(x, y, r, 0, 2*3.14159);
+            pincel.fill();
+        }
+
+        <!--  2 AUMENTA O RAIO DO CÍRCULO PELO SHIFT: evento.shiftKey -->
+        if(evento.shiftKey) {
+            r += 1
+        }
+        <!-- 3 DIMINUI O RAIO DO CÍRCULO PELO ALT: evento.altKey -->
+        if(r > 10) {
+            if(evento.altKey) {
+                r -= 1;
+            }
+        }else{
+            r = 10;
+        }
+
+        <!--  4 MUDA A COR PELO CLIQUE DIREITO: tela.oncontextmenu-->
+        function mudaCor(evento) {
+            c += 1
+            if(c >= colors.length) {
+                c = 0
+            }
+            return false;
+        }
+        tela.oncontextmenu = mudaCor;
+    }
+
+    tela.onmousemove = exibeCirculo;
+
+    <!--  5 HABILITA E DESABILITA O DESENHO COM O MOUSE   -->
+
+
+
+<!-- ATENÇÃO PARA AS FUNÇÕES ANÔNIMAS ABAIXO: -->
+    tela.onmousedown = function() {
+        desenha = true;
+    };
+    tela.onmouseup = function() {
+        desenha = false;
+    };
+
+</script>

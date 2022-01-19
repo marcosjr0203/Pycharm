@@ -1,0 +1,47 @@
+<canvas width = "600" height = 400></canvas>
+<script>
+
+    var tela = document.querySelector("canvas");
+    var pincel = tela.getContext("2d");
+    var c = 0
+    var r = 10
+    var colors = ["green", "blue", "red"]
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400);
+
+<!-- DESENHA CÍRCULO PELO CMD tela.onclick QUE CHAMA A FUNÇÃO  -->
+    function exibeCirculo(evento) {
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+
+<!--  AUMENTA O RAIO DO CÍRCULO PELO CMD evento.shiftKey -->
+        if(evento.shiftKey) {
+            r += 10
+        }
+        if(r > 10) {
+
+<!--  DIMINUI O RAIO DO CÍRCULO PELO CMD evento.altKey -->
+            if(evento.altKey) {
+                r -= 5
+            }
+        }else{
+            r = 10
+        }
+        pincel.fillStyle = colors[c]
+        pincel.beginPath();
+        pincel.arc(x, y, r, 0, 2*3.14159);
+        pincel.fill();
+    }
+    tela.onclick = exibeCirculo;
+
+<!--  MUDA A COR PELO CLIQUE DIREITO, tela.oncontextmenu-->
+    function mudaCor(evento) {
+        c += 1
+        if(c >= colors.length) {
+            c = 0
+        }
+        return false;
+    }
+
+    tela.oncontextmenu = mudaCor;
+</script>

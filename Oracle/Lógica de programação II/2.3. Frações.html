@@ -1,0 +1,30 @@
+<canvas width="600" height="400"></canvas>
+<script>
+    function grafico(x, y, t, c) {
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+        pincel.fillStyle = c;
+        pincel.fillRect(x, y, t, y);
+        pincel.StrokeStyle = "black";
+        pincel.strokeRect(x, y, t, y);
+        pincel.fill();
+    }
+    function fracao(num, den) {
+        xg = 50
+        xwp = xg*(num+1)
+        for(n = num; n > 0; n--) {
+            grafico(xg, 50, 50, "green");
+            xg += 50
+            }
+
+        xw = xwp
+        den -= num
+        for(d = den; d > 0; d--) {
+            grafico(xw, 50, 50, "white");
+            xw += 50
+            }
+        document.write(xw)
+
+    }
+    fracao(5,7)
+</script>

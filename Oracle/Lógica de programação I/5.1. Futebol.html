@@ -1,0 +1,22 @@
+<meta charset = "UTF-8">
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function print(txt) {
+        document.write(txt)
+        pulaLinha();
+    }
+    var vitorias = parseInt(prompt("Entre com o número de vitórias:"));
+    var empates = parseInt(prompt("Entre com o número de empates:"));
+    var pontos = vitorias * 3 + empates;
+    print("Pontuação: " + pontos)
+    if(pontos > 28){
+        print("Campanha melhor do que a do ano passado");}
+    if(pontos == 28){
+        print("Campanha igual a do ano passado");}
+    if(pontos < 28){
+        print("Campanha pior do que a do ano passado");}
+    print("Fim")
+</script>

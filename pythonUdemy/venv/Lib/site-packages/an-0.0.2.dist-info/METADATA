@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: an
+Version: 0.0.2
+Summary: Scraping and parsing amazon
+Home-page: https://github.com/thorwhalen/ut/tree/master/webscrape/misc/amazon.py
+Author: Thor Whalen
+License: apache-2.0
+Platform: any
+Description-Content-Type: text/markdown
+
+
+# an
+Scraping and parsing amazon
+
+
+To install:	```pip install an```
+
+

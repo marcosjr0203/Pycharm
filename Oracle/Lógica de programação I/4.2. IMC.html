@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<script>
+
+	function pulaLinha(){
+		document.write("<br>")
+	}
+
+
+	function print(txt){
+		document.write(txt)
+		pulaLinha()
+		}
+
+	function imcCalc(p, a){
+		i = Math.round(p/a**2)
+		return i 
+		}
+
+	var peso = 74
+	var altura = 1.7
+	imc = imcCalc(peso, altura)
+	print("O IMC de Marcos é " + imc)
+
+	var peso = 60
+	var altura = 1.63
+	imc = imcCalc(peso, altura)
+	print("O IMC de Samira é " + imc)
+
+	print("A soma dos IMCs é" + (imcCalc(74, 1.7) + imcCalc(60, 1.63)))
+</script>

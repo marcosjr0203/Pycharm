@@ -1,0 +1,31 @@
+<script>
+
+	function pulaLinha(){
+		document.write("<br>")
+	}
+
+
+	function print(txt){
+		document.write(txt)
+		pulaLinha()
+		}
+
+	function imcCalc(p, a){
+		i = p/a**2
+		return i
+		}
+
+	var nome = prompt("Informe o seu nome")
+	var peso = parseFloat(prompt("Informe seu peso (em kg)"))
+	var altura = parseFloat(prompt("Informe sua altura (em m)"))
+	imc = imcCalc(peso, altura)
+    print("O IMC de " + nome + " é " + Math.round(imc))
+    if(imc < 18.5){
+    	print(nome + " está abaixo do peso.")}
+    if(imc >= 18.5 && imc < 25){
+    	print(nome + " está em seu peso ideal.")}
+    if(imc >= 25){
+    	print(nome + " está acima do peso.")}
+
+</script>
+<meta charset="UTF-8">

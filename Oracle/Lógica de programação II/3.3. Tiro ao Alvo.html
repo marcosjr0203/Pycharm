@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+    var raio = 10;
+
+    function desenhaCirculo(width, height, raio, cor) {
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(width, height, raio, 0, 2 * Math.PI);
+        pincel.fill();
+    }
+
+    function sorteiaCirculo() {
+        width = (Math.round(Math.random()*500));
+        height = (Math.round(Math.random()*300));
+        desenhaCirculo(width, height, raio + 20, 'red'); // maior círculo
+        desenhaCirculo(width, height, raio + 10, 'white');
+        desenhaCirculo(width, height, raio, 'red'); // menor circulo
+        return width, height;
+        }
+
+    function dispara(evento) {
+        var x = evento.pageX - tela.offsetLeft;
+        var y = evento.pageY - tela.offsetTop;
+        alvo = (x, y);
+        disparo = (width, height);
+        if(alvo == disparo) {
+            alert("acertou");
+        }else{
+            alert("errou");
+            }
+        sorteiaCirculo();
+            //como limpar a tela?
+        }
+    sorteiaCirculo();
+    tela.onclick = dispara;
+
+</script>

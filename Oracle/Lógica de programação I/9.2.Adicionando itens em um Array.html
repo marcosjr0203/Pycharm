@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<input/>
+<button>Verificar</button>
+
+<script>
+    function print(txt) {
+        document.write(txt + "<br>")
+        }
+
+    function sorteia() {
+        return Math.round(Math.random()*10)
+            }
+
+    function sorteiaNumeros(num) {
+        var segredo = [];
+        while(num > 0) {
+            segredo.push(sorteia())
+            num--
+            }
+        return segredo;
+        }
+
+    num_seg = parseInt(prompt("Quantos segredos?"));
+    segredos = sorteiaNumeros(num_seg);
+    print(segredos);
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verifica() {
+        var achou = false;
+        for(var posit = 0; posit < segredos.length; posit++) {
+            if(input.value == segredos[posit]) {
+                alert("Você acertou!");
+                achou = true;
+                break;
+                }
+            }
+            if(achou == false) {
+                alert("Você errou!")
+            }
+        input.value = "";
+        input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+</script>

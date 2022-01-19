@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<canvas width="600" height="400"></canvas>
+<script>
+    var tela = document.querySelector("canvas")
+    var pincel = tela.getContext("2d")
+    var serie2015 = [50, 25, 20, 5];
+    var serie2016 = [65, 20, 13, 2];
+    var colors = ['blue', 'green', 'yellow', 'red'];
+
+    function desenhaGrafico(x, y, s, d, c) {
+        pincel.fillStyle = c;
+        pincel.strokeStyle = "black";
+        pincel.fillRect(x, y, d, s)
+        pincel.strokeRect(x, y, d, s)
+        }
+
+        function desenhaTexto(x, y, texto) {
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+        pincel.font='10px Georgia';
+        pincel.fillStyle='black';
+        pincel.fillText(texto, x, y);
+    }
+    y = 20
+    desenhaTexto(50, 10, "Série 2015")
+    for(i = 0; i < serie2015.length; i++) {
+        desenhaGrafico(50, y, serie2015[i], 50, colors[i])
+        y+=serie2015[i]
+        }
+
+        y = 20
+    desenhaTexto(120, 10, "Série 2016")
+    for(i = 0; i < serie2016.length; i++) {
+        desenhaGrafico(120, y, serie2016[i], 50, colors[i])
+        y+=serie2016[i]
+        }
+</script>

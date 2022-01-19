@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+
+
+<script>
+    function pulaLinha() {
+        document.write("<br><br>")
+    }
+    function print(txt) {
+        document.write(txt)
+        pulaLinha()
+    }
+    print("<strong>Todos os Pares de 1 a 100.</strong>")
+    var numero = 2
+    while(numero <= 100) {
+        print(numero)
+        numero += 2
+    }
+    print("<strong>Todos os números entre 30 e 40, exceto 33 e 37.</strong>")
+    var numero2 = 30
+    while(numero2 <= 40) {
+        if(numero2 == 33) {
+            numero2 += 1
+            }
+        if(numero2 == 37) {
+            numero2 += 1
+            }else{
+                print(numero2)
+                numero2 += 1}
+        }
+    print("<strong>Números entre 20 e 0, ordem decrescente.</strong>")
+    var numero3 = 20
+    while(numero3 >= 0) {
+        print(numero3)
+        numero3 -= 1
+        }
+    print("<strong>FIM</strong>")
+</script>
