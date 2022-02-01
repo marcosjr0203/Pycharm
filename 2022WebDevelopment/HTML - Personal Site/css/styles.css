@@ -1,0 +1,35 @@
+body {
+  color: #313131;
+  align-content: center;
+  background-color: #626262;
+  font-family:monospace;
+  font-size: 18px;
+  font-weight: lighter;
+  font-stretch: extra-expanded;
+}
+
+h1 {
+  color: #191919;
+}
+
+h2 {
+  color: #191919;
+}
+
+h3 {
+  color: #2D4263;
+}
+
+hr {
+  border-style: dotted none none;
+  border-top-color: #313131;
+  border-width: 6px;
+  width: 6%
+}
+
+img {
+  height: 120px;
+  width: 120px;
+  border-radius: 90px;
+  border-style: outset;
+}

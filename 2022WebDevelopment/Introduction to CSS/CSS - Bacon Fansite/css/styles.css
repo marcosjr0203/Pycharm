@@ -1,0 +1,20 @@
+body {
+  background-color: #B33030;
+  font-family: cursive;
+  color: #F2F5C8;
+  font-size: 20px;
+}
+h1 {
+  font-size: 100px;
+  color: #D67D3E;
+}
+img {
+  width: 300px;
+  height: 360px;
+  background-color: #FFCC1D;
+  border-radius: 11.25px;
+}
+
+img:hover {
+  background-color: green;
+}
